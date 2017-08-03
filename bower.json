@@ -1,0 +1,22 @@
+{
+  "name": "local_weather",
+  "homepage": "https://github.com/gavin771/fcc_local_weather",
+  "authors": [
+    "Gavin Samuels <gavin.samuels10@gmail.com>"
+  ],
+  "description": "Free code camp project for local weather",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.11",
+    "moment": "^2.18.1"
+  }
+}
