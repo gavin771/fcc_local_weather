@@ -14,7 +14,7 @@ $(document).ready(function () {
                 celcius = data.main.temp;
                 farenheit = celcius * 9 / 5 + 32;
                 var city = data.name
-                var iconUrl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+                var iconUrl = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
                 unit = "c";
 
                 //console.log(city);
