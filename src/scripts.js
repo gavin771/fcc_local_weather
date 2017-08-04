@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     function getWeather(long, lat) {
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?",
+            url: "https://api.openweathermap.org/data/2.5/weather?",
             dataType: "jsonp",
             data: "lat=" + lat + "&lon=" + long + "&appid=aacbf7f4052df19cc3d903aa1afbf36e&units=metric"
         })
