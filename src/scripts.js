@@ -2,6 +2,7 @@
 $(document).ready(function () {
     var celcius;
     var farenheit;
+    var unit;
 
     function getWeather(long, lat) {
         $.ajax({
@@ -14,6 +15,8 @@ $(document).ready(function () {
                 farenheit = celcius * 9 / 5 + 32;
                 var city = data.name
                 var iconUrl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+                unit = "c";
+
                 //console.log(city);
                 //console.log(iconUrl);
 
@@ -27,7 +30,14 @@ $(document).ready(function () {
 
 
     function toggleUnit() {
-
+        if (unit == "c") {
+            unit = "f";
+            $("#temp-value").html("<i class='thermometer half icon'></i>" + farenheit + " &#8457;");
+        }
+        else {
+            unit = "c";
+            $("#temp-value").html("<i class='thermometer half icon'></i>" + celcius + " &#8451;");
+        }
     }
 
     function error(err) {
@@ -48,5 +58,9 @@ $(document).ready(function () {
                 getWeather(position.coords.longitude, position.coords.latitude)
             }, error, options);
         };
+    })
+
+    $('#temp-switch').click(function (e) {
+        toggleUnit();
     })
 });
